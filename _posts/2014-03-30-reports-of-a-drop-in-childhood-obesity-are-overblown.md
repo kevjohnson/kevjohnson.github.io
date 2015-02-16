@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Reports of a Drop in Childhood Obesity are Overblown"
+description: "FiveThirtyEight recently posted an article with that title.  They're not wrong, but I have a few issues with their analysis."
 ---
 
 I ripped this headline from a [recent post at fivethirtyeight.com](http://fivethirtyeight.com/features/reports-of-a-drop-in-childhood-obesity-are-overblown) where they examine a flood of recent headlines about the recent paper published by scientists at the CDC.  The mainstream news mostly talked about the "significant" drop in obesity prevalence among kids age 2-5.  Emily Oster makes the case that these headlines are greatly overblown, and she is absolutely correct about that.  I'm certain the authors of the [original paper](https://jama.jamanetwork.com/article.aspx?articleid=1832542) would agree with her.

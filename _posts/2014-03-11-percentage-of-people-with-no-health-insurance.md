@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Percentage of People with No Health Insurance"
+description: "Maps of the percentage of people with no health insurance for the top 15 metro areas in the US."
 ---
 
 As a followup to my [previous post on making maps with R]({{ site.url }}/making-maps-in-r-part-2/), I decided to go ahead and make a bunch of maps of that data for the top 15 metro areas in the US.  I [posted it on Reddit](http://www.reddit.com/r/dataisbeautiful/comments/201tob/percentage_of_people_with_no_form_of_health/) where you can find a good discussion on my methods and data source.

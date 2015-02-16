@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Quantifying the Postseason Failure of the Atlanta Braves"
+description: "Just how bad are the Braves in the playoffs?"
 ---
 
 ###Introduction

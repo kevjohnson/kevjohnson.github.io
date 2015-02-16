@@ -2,6 +2,7 @@
 layout: post
 title: "Using R in Sublime Text 3"
 date: 2014-02-10
+description: "Tutorial on running R from within Sublime Text 3."
 ---
 
 This post will get you up and running using R in Sublime Text 3.  If you're not familiar with Sublime Text I recommend watching [these videos](https://tutsplus.com/course/improve-workflow-in-sublime-text-2/).  It focuses on Macs and it's a bit outdated, but it's a really good introduction to what you can do with Sublime Text.

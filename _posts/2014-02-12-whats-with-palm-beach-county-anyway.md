@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "What's With Palm Beach County Anyway"
+description: "Regression analysis on Palm Beach County election results from the 2000 US Presidential Election."
 ---
 
 ###Introduction

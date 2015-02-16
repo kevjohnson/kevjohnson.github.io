@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Making Maps in R (Part 2)"
+description: "Part 2 of tutorial on making maps in R.  This part goes over how to plot your data on top of Google Maps."
 ---
 
 This is a continuation of my [previous post]({{ site.url }}/making-maps-in-r/) on making maps in R with ggplot2.

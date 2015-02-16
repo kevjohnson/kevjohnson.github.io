@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Why You Shouldn't Freak Out About Ebola"
+description: "Seriously, it's not worth losing sleep over.  If you want something to be scared of then I'm pretty sure I just saw a spider crawl under your bed sheets."
 ---
 
 I've seen a lot of hysteria surrounding Ebola recently, and most of it isn't grounded in reality.  It's a serious problem in West Africa right now, and it's something we need to pay attention to, but the risk of Ebola becoming a serious problem in a first world country is incredibly low.

@@ -3,6 +3,7 @@ layout: post
 title: "Making Maps in R"
 date: 2014-02-23
 modified: 2015-02-15
+description: "Tutorial on how to make your own maps in R."
 ---
 
 **Update (2015-02-15):** My workflow has changed significantly in the last year so I have updated this post to reflect how I currently do things.

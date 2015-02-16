@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Children Without Siblings are 62% More Likely to be Unhappy, Sad, or Depressed"
+description: "Regression analysis on NHANES data to examine differences between oldest, youngest, middle, and only children."
 ---
 
 ###Data
