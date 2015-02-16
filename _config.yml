@@ -1,0 +1,13 @@
+# Site settings
+title: Kevin Johnson
+email: kjohnson63@gatech.edu
+description: > # this means to ignore newlines until "baseurl:"
+  PhD student in Computational Science and Engineering at Georgia Tech.  
+  Primarily focused on healthcare analytics but I'm not picky.
+baseurl: "" # the subpath of your site, e.g. /blog/
+#url: "http://www.kevjohnson.org" # the base hostname & protocol for your site
+twitter_username: kej_kevin
+github_username:  kevjohnson
+
+# Build settings
+markdown: kramdown
