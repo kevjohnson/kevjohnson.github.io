@@ -8,7 +8,7 @@ description: "Tutorial on how to make your own maps in R."
 
 **Update (2015-02-15):** My workflow has changed significantly in the last year so I have updated this post to reflect how I currently do things.
 
-I make a lot of maps in my line of work. R is not the easiest way to create maps, but it is convenient and it allows for full control of what the map looks like. There are tons of different ways to create maps, even just within R. In this post I'll talk about the method I use most of the time.  I will assume you are proficient in R and have some level of familiarity with the [ggplot2](http://www.ggplot2.org/) package.
+I make a lot of maps in my line of work. R is not the easiest way to create maps, but it is convenient and it allows for full control of what the map looks like. There are tons of different ways to create maps, even just within R. In this post I'll talk about the method I use most of the time.  I will assume you are proficient in R and have some level of familiarity with the [ggplot2](http://www.ggplot2.org/) package ([click here]({{ site.url }}/pdfs/ggplot2.pdf) for an introduction to ggplot2 that I wrote for my MS Analytics students).
 
 <!--break-->
 
