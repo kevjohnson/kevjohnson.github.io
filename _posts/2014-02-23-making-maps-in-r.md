@@ -16,7 +16,7 @@ The American Community Survey provides data on almost any topic imaginable for v
 
 Oh, right, what is a shapefile anyway?  A shapefile is yet another file format that is designed to hold geospatial vector data for use in geographic information system software.  In simple terms, it holds a bunch of information that is used to draw borders.  This actually gets really complicated really fast once you go down the rabbit hole of different projection methods and coordinate systems.  I recommend you stay far away from that.
 
-The Mercator projection is the default for this method which works just fine for small regions (pretty much any projection method will work fine for something as small as a state).  If you want to make a map of the entire United States then I recommend the Albers projection with 33 and 45 as your input latitudes.  Google is your friend here, but I must stress the importance of not falling too deep into the world of cartography.  It's a scary place.
+The Mercator projection is the default for this method which works just fine for small regions (pretty much any projection method will work fine for something as small as a state).  If you want to make a map of the entire United States then I recommend the Lambert projection with 33 and 45 as your input latitudes.  Google is your friend here, but I must stress the importance of not falling too deep into the world of cartography.  It's a scary place.
 
 Here's a list of packages I'll be using:
 
