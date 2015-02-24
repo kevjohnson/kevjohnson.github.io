@@ -14,9 +14,9 @@ I make a lot of maps in my line of work. R is not the easiest way to create maps
 
 The American Community Survey provides data on almost any topic imaginable for various geographic levels in the US. For this example I will look at the 2012 5-year estimates of the percent of people without health insurance by census tract in the state of Georgia (obtained from the [US Census FactFinder](http://factfinder2.census.gov/)). Shapefiles were obtained from the [US Census TIGER database](http://www.census.gov/geo/maps-data/data/tiger.html). I generally use the cartographic boundary files since they are simplified representations of the boundaries, which saves a lot of space and processing time.
 
-Oh, right, what is a shapefile anyway?  A shapefile is yet another file format that is designed to hold geospatial vector data for use in geographic information system software.  In simple terms, it holds a bunch of information that is used to draw borders.  This actually gets really complicated really fast once you go down the rabbit hole of different projection methods and coordinate systems.  I recommend you stay far away from that.  
+Oh, right, what is a shapefile anyway?  A shapefile is yet another file format that is designed to hold geospatial vector data for use in geographic information system software.  In simple terms, it holds a bunch of information that is used to draw borders.  This actually gets really complicated really fast once you go down the rabbit hole of different projection methods and coordinate systems.  I recommend you stay far away from that.
 
-The Mercator projection is the default for this method which works just fine for small regions (pretty much any projection method will work fine for something as small as a state).  If you want to make a map of the entire United States then I recommend the Lambert projection with 33 and 45 as your input latitudes.  Google is your friend here, but I must stress the importance of not falling too deep into the world of cartography.  It's a scary place.
+The Mercator projection is the default for this method which works just fine for small regions (pretty much any projection method will work fine for something as small as a state).  If you want to make a map of the entire United States then I recommend the Albers projection with 33 and 45 as your input latitudes.  Google is your friend here, but I must stress the importance of not falling too deep into the world of cartography.  It's a scary place.
 
 Here's a list of packages I'll be using:
 
@@ -57,7 +57,7 @@ It's finally time to create a map.  There are several functions in ggplot2 that 
 
 {% highlight r %}
 p <- ggplot() +
-    geom_polygon(data = plotData, aes(x = long, y = lat, group = group, 
+    geom_polygon(data = plotData, aes(x = long, y = lat, group = group,
         fill = percent), color = "black", size = 0.25)
 ggsave(p, file = "map1.png", width = 6, height = 4.5, type = "cairo-png")
 {% endhighlight %}
@@ -67,7 +67,7 @@ We have a map! Unfortunately, there are many problems with this map that need to
 
 {% highlight r %}
 p <- ggplot() +
-    geom_polygon(data = plotData, aes(x = long, y = lat, group = group, 
+    geom_polygon(data = plotData, aes(x = long, y = lat, group = group,
         fill = percent), color = "black", size = 0.25) +
     coord_map()
 ggsave(p, file = "map2.png", width = 5, height = 4.5, type = "cairo-png")
@@ -83,9 +83,9 @@ county <- readOGR(dsn = ".", layer = "gz_2010_13_060_00_500k")
 county <- fortify(county, region="COUNTY")
 
 p <- ggplot() +
-    geom_polygon(data = plotData, aes(x = long, y = lat, group = group, 
+    geom_polygon(data = plotData, aes(x = long, y = lat, group = group,
         fill = percent)) +
-    geom_polygon(data = county, aes(x = long, y = lat, group = group), 
+    geom_polygon(data = county, aes(x = long, y = lat, group = group),
         fill = NA, color = "black", size = 0.25) +
     coord_map()
 ggsave(p, file = "map3.png", width = 5, height = 4.5, type = "cairo-png")
@@ -100,9 +100,9 @@ I used to use the `scale_fill_gradientn()` function and supply the colors manual
 
 {% highlight r %}
 p <- ggplot() +
-    geom_polygon(data = plotData, aes(x = long, y = lat, group = group, 
+    geom_polygon(data = plotData, aes(x = long, y = lat, group = group,
         fill = percent)) +
-    geom_polygon(data = county, aes(x = long, y = lat, group = group), 
+    geom_polygon(data = county, aes(x = long, y = lat, group = group),
         fill = NA, color = "black", size = 0.25) +
     coord_map() +
     scale_fill_distiller(palette = "Greens")
@@ -114,12 +114,12 @@ I think it makes more sense for the higher percentages to be on top rather than 
 
 {% highlight r %}
 p <- ggplot() +
-    geom_polygon(data = plotData, aes(x = long, y = lat, group = group, 
+    geom_polygon(data = plotData, aes(x = long, y = lat, group = group,
         fill = percent)) +
-    geom_polygon(data = county, aes(x = long, y = lat, group = group), 
+    geom_polygon(data = county, aes(x = long, y = lat, group = group),
         fill = NA, color = "black", size = 0.25) +
     coord_map() +
-    scale_fill_distiller(palette = "Greens", labels = percent, 
+    scale_fill_distiller(palette = "Greens", labels = percent,
         breaks = pretty_breaks(n = 10)) +
     guides(fill = guide_legend(reverse = TRUE))
 ggsave(p, file = "map5.png", width = 5, height = 4.5, type = "cairo-png")
@@ -130,12 +130,12 @@ Finally it's time to get rid of the gray background and axis labels.  I used to 
 
 {% highlight r %}
 p <- ggplot() +
-    geom_polygon(data = plotData, aes(x = long, y = lat, group = group, 
+    geom_polygon(data = plotData, aes(x = long, y = lat, group = group,
         fill = percent)) +
-    geom_polygon(data = county, aes(x = long, y = lat, group = group), 
+    geom_polygon(data = county, aes(x = long, y = lat, group = group),
         fill = NA, color = "black", size = 0.25) +
     coord_map() +
-    scale_fill_distiller(palette = "Greens", labels = percent, 
+    scale_fill_distiller(palette = "Greens", labels = percent,
         breaks = pretty_breaks(n = 10), values = c(1,0)) +
     guides(fill = guide_legend(reverse = TRUE)) +
     theme_nothing(legend = TRUE) +
